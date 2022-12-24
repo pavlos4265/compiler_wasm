@@ -1,0 +1,9 @@
+i32 add(i32 start, i32 step, i32 times) {
+	i32 i = 0;
+	while (i < times) {
+		start = start+step;
+		
+		i = i + 1;
+	}
+	return start;
+}

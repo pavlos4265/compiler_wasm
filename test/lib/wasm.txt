@@ -1,0 +1,55 @@
+i32 load_i32(i32 offset) {
+	i32 val;
+	_wasm "local.get $offset";
+	_wasm "i32.load 0 0";
+	_wasm "local.set $val";
+	return val;
+}
+
+f32 load_f32(i32 offset) {
+	f32 val;
+	_wasm "local.get $offset";
+	_wasm "f32.load 0 0";
+	_wasm "local.set $val";
+	return val;
+}
+
+i32 load8_as_i32(i32 offset) {
+	i32 val;
+	_wasm "local.get $offset";
+	_wasm "i32.load8_s 0 0";
+	_wasm "local.set $val";
+	return val;
+}
+
+i32 load16_as_i32(i32 offset) {
+	i32 val;
+	_wasm "local.get $offset";
+	_wasm "i32.load16_s 0 0";
+	_wasm "local.set $val";
+	return val;
+}
+
+void store_i32(i32 offset, i32 val) {
+	_wasm "local.get $offset";
+	_wasm "local.get $val";
+	_wasm "i32.store 0 0";
+}
+
+void store_f32(i32 offset, f32 val) {
+	_wasm "local.get $offset";
+	_wasm "local.get $val";
+	_wasm "f32.store 0 0";
+}
+
+void store8_i32(i32 offset, i32 val) {
+	_wasm "local.get $offset";
+	_wasm "local.get $val";
+	_wasm "i32.store8 0 0";
+}
+
+void store16_i32(i32 offset, i32 val) {
+	_wasm "local.get $offset";
+	_wasm "local.get $val";
+	_wasm "i32.store16 0 0";
+}

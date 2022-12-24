@@ -1,0 +1,13 @@
+i32 fib(i32 n) {
+	if (n<=1)
+		return n;
+	
+	return fib(n-1)+fib(n-2);
+}
+
+i32 fact(i32 n) {
+	if (n==0)
+		return 1;
+	
+	return n * fact(n-1);
+}

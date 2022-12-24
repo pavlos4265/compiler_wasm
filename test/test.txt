@@ -1,0 +1,13 @@
+#include "lib/wasm.txt"
+
+void setCharacter(i32 pos, i32 char) {
+	store8_i32(pos, char);
+}
+
+void setHelloString(i32 pos) {
+	setCharacter(pos, 72);
+	setCharacter(pos+1, 101);
+	setCharacter(pos+2, 108);
+	setCharacter(pos+3, 108);
+	setCharacter(pos+4, 111);
+}
