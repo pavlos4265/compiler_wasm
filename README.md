@@ -1,4 +1,4 @@
-##compiler to wasm
+## compiler to wasm
 
 A compiler that compiles a c-like language to wasm.
 
